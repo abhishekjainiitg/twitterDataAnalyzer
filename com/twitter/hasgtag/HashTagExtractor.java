@@ -6,11 +6,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class HashTagExtractor {
+    public HashTagExtractor() {
+    }
 
-    public static void main(String[] args) {
-
-        String fileName = "D:\\Programming\\Java\\3JavaInteractiveCourses\\twitterHastagExtractor\\src\\com\\twitter\\hasgtag\\data.txt";
+    public void extract() {
+        String fileName = "D:\\Programming\\Java\\3JavaInteractiveCourses\\twitterDataAnalyzer\\src\\com\\twitter\\hasgtag\\data.txt";
 
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName)))
         {
@@ -31,7 +32,7 @@ public class Main {
             hashtags.sort(String::compareTo);
 
             for(String hashtag: hashtags) {
-                System.out.println(hashtag);
+                // System.out.println(hashtag);
             }
 
             System.out.println(hashtags.size());
@@ -42,4 +43,5 @@ public class Main {
             e.printStackTrace();
         }
     }
+
 }
